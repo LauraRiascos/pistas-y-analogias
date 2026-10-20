@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pistas y analogías | Aprender a aprender</title>
+  <meta name="description" content="Recurso interactivo de acertijos y analogías del curso Aprender a aprender.">
+  <meta name="keywords" content="aprender a aprender, cerebro predictivo, pensamiento asociativo, control ejecutivo, analogías">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon_escudo.ico" rel="icon">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- boostrap css -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Estilos propios del recurso "Pistas y analogías" -->
+  <link href="assets/css/pistas-analogias.css" rel="stylesheet">
+
+  <style>
+    @media print {
+      .hero, .nombre-curso, .social-links,.navmenu {
+        display: none !important;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center nombre-curso">
+          <i class="bi bi-box-arrow-right d-flex align-items-center"><a>Aprender a aprender</a></i>
+        </div>
+        <div class="social-links d-md-flex align-items-center">
+          <button class="switch botones-ayudas" id="switch" aria-label="Cambiar a modo oscuro"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="botones-ayudas" onclick="agrandar()" aria-label="Aumentar tamaño de letra">A+</button>
+          <button class="botones-ayudas" onclick="achicar()" aria-label="Reducir tamaño de letra">A-</button>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="./assets/img/logo_upb_virtual_md.svg" alt="UPB Virtual" width="100px" height="auto">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#" class="tab-link" data-tab="seccion2">Inicio</a></li>
+            <li class="pa-nav-hidden" data-pa-nav="seccion3"><a href="#" class="tab-link" data-tab="seccion3">Acertijos</a></li>
+            <li class="pa-nav-hidden" data-pa-nav="seccion4"><a href="#" class="tab-link" data-tab="seccion4">Tus analogías</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+    <!-- Portada -->
+    <section id="seccion1" class="hero section light-background pa-hero">
+      <canvas class="pa-neural" id="paNeural" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center pa-hero-copy">
+            <span class="pa-hero-kicker pa-reveal"><span class="pa-dot"></span>Unidad 3 | Domando el monstruo de la procrastinación </span>
+            <h1 class="titulo-contenido pa-reveal"><span>Pistas</span><span>y analogías</span></h1>
+            <div class="pa-reveal">
+              <br>
+              <button type="button" class="pa-hero-cta" id="paHeroCta">Empezar el recorrido <i class="bi bi-arrow-down"></i></button>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="pa-brain-wrap">
+              <span class="pa-orbit" aria-hidden="true"></span>
+              <img class="pa-brain" src="assets/img/cerebro-3d.webp" alt="Cerebro humano en 3D con conexiones neuronales iluminadas">
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg class="pa-hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C240,10 480,60 720,36 C960,12 1200,52 1440,28 L1440,60 L0,60 Z"></path>
+      </svg>
+    </section><!-- /Portada -->
+
+    <!-- ===================================================== -->
+    <!-- TAB 1 · Antes de empezar (Pantallas 1 y 2)            -->
+    <!-- ===================================================== -->
+    <section id="seccion2" class="tab-content active">
+      <div class="container pa-section">
+
+        <!-- Pantalla 1 -->
+        <h1>Los tres pilares que debes considerar antes de empezar</h1>
+        <p class="pa-section-lead">Tres sistemas trabajan juntos cada vez que enfrentas una pista difícil.</p>
+
+        <div class="pa-pillars">
+          <span class="pa-axon" aria-hidden="true"></span>
+
+          <article class="pa-pillar">
+            <div class="pa-node" aria-hidden="true"><svg class="pa-ico" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M11 4.2C10.2 3.4 9 3 7.9 3.3 6.6 3.6 5.7 4.7 5.6 6 4.2 6.3 3.2 7.5 3.3 9 2.4 9.7 2 10.8 2.2 11.9c.2 1 .8 1.8 1.6 2.2-.3 1.4.4 2.9 1.8 3.5.3 1.6 1.7 2.8 3.4 2.8.8 0 1.5-.3 2-.8ZM13 4.2c.8-.8 2-1.2 3.1-.9 1.3.3 2.2 1.4 2.3 2.7 1.4.3 2.4 1.5 2.3 3 .9.7 1.3 1.8 1.1 2.9-.2 1-.8 1.8-1.6 2.2.3 1.4-.4 2.9-1.8 3.5-.3 1.6-1.7 2.8-3.4 2.8-.8 0-1.5-.3-2-.8Z"/><path d="M8 8.4c1.3.3 1.6 1.4 1.4 2.5M5.6 12.6c1.3-.4 2.6.1 3.2 1.4M18.4 12.6c-1.3-.4-2.6.1-3.2 1.4M16 8.4c-1.3.3-1.6 1.4-1.4 2.5" fill="none" stroke="#000087" stroke-opacity=".45" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+            <h3>Cerebro predictivo</h3>
+            <p>La mente no espera pasivamente la respuesta: genera constantemente una hipótesis previa frente a la incertidumbre (Feldman Barrett). Stanislas Dehaene lo llama <strong>generación de hipótesis a priori.</strong></p>
+          </article>
+
+          <article class="pa-pillar">
+            <div class="pa-node" aria-hidden="true"><i class="bi bi-diagram-3"></i></div>
+            <h3>Pensamiento asociativo</h3>
+            <p>Utilizarás analogías para tender puentes entre lo que ya comprendes y los conceptos abstractos no resueltos.</p>
+          </article>
+
+          <article class="pa-pillar">
+            <div class="pa-node" aria-hidden="true"><i class="bi bi-sliders"></i></div>
+            <h3>Control ejecutivo</h3>
+            <p>Ajusta el modelo mental tras la confirmación o el error, transformando la frustración en plasticidad cerebral real.</p>
+          </article>
+        </div>
+
+        <!-- Pantalla 2 -->
+        <div class="pa-block">
+          <h2>El caso de Sofía</h2>
+
+          <div class="pa-case">
+            <div class="pa-case-visual">
+              <img class="pa-sofia" src="assets/img/sofia-confundida.svg" alt="Sofía, con cara de confusión, se rasca la cabeza">
+              <div class="pa-blank" aria-hidden="true">
+                <span>Respuesta:</span><span class="pa-blank-box"></span>
+              </div>
+            </div>
+            <div class="pa-case-body">
+              <h3>El dilema de Sofía</h3>
+              <p>Sofía es brillante, pero ante las pistas difíciles prefiere <span class="pa-highlight">dejar la casilla en blanco</span> por miedo al fallo.</p>
+              <p>En este recurso te enfrentarás a la incomodidad deliberada de "adivinar con fundamento" antes de verificar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pa-block">
+          <h2>Reglas de interacción</h2>
+
+          <div class="pa-rules-panel">
+            <ol class="pa-rules">
+              <li class="pa-rule">
+                <span class="pa-rule-n" aria-hidden="true">01</span>
+                <div class="pa-rule-icon" aria-hidden="true"><i class="bi bi-lightbulb-fill"></i></div>
+                <h4>Propón una hipótesis</h4>
+                <p>Selecciona la respuesta que creas correcta ante cada acertijo.</p>
+              </li>
+              <li class="pa-rule">
+                <span class="pa-rule-n" aria-hidden="true">02</span>
+                <div class="pa-rule-icon" aria-hidden="true"><i class="bi bi-unlock-fill"></i></div>
+                <h4>Verifica tu respuesta</h4>
+                <p>La opción "Verificar respuesta" se habilita solo cuando has propuesto una.</p>
+              </li>
+              <li class="pa-rule">
+                <span class="pa-rule-n" aria-hidden="true">03</span>
+                <div class="pa-rule-icon" aria-hidden="true"><i class="bi bi-chat-quote-fill"></i></div>
+                <h4>Declara tu analogía</h4>
+                <p>Escribe tu propia analogía para poder pasar al siguiente acertijo.</p>
+              </li>
+            </ol>
+
+            <div class="pa-rules-foot">
+              <p class="pa-rules-note"><i class="bi bi-info-circle-fill" aria-hidden="true"></i><span>Tendrás que escribir una hipótesis o seleccionar una respuesta ante unos acertijos. Una vez propongas una respuesta, el recurso te habilitará la opción "<em>Verificar respuesta</em>"; antes de tu respuesta hipotética permanecerá bloqueada.</span></p>
+              <button type="button" class="pa-btn" data-pa-goto="seccion3">Ir al primer acertijo <i class="bi bi-play-fill"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Fin TAB 1 -->
+
+    <!-- ===================================================== -->
+    <!-- TAB 2 · Acertijos (Pantallas 3 a 8)                   -->
+    <!-- ===================================================== -->
+    <section id="seccion3" class="tab-content">
+      <div class="container pa-section">
+
+        <h1>Acertijos</h1>
+        <p class="pa-section-lead">Resuelve cada acertijo y declara tu analogía para desbloquear el siguiente.</p>
+
+        <!-- Recorrido de progreso -->
+        <ol class="pa-track" id="paTrack" aria-label="Progreso de los acertijos">
+          <li class="pa-track-step is-current" data-track="1">
+            <span class="pa-track-dot"><i class="bi bi-1-circle"></i></span>
+            <span>Acertijo 1</span>
+          </li>
+          <li class="pa-track-step" data-track="2">
+            <span class="pa-track-dot"><i class="bi bi-lock-fill"></i></span>
+            <span>Acertijo 2</span>
+          </li>
+          <li class="pa-track-step" data-track="3">
+            <span class="pa-track-dot"><i class="bi bi-lock-fill"></i></span>
+            <span>Acertijo 3</span>
+          </li>
+        </ol>
+
+        <div class="pa-stage" id="paStage">
+
+          <!-- ============ Pantalla 3 ============ -->
+          <article class="pa-screen pa-intro is-active" data-screen="0">
+            <div class="pa-intro-bg pa-intro-bg--brain" aria-hidden="true">
+              <div class="pa-intro-brain"><img src="assets/img/cerebro-3d.webp" alt=""></div>
+            </div>
+            <div class="pa-sparks" aria-hidden="true"></div>
+            <div class="pa-intro-content">
+              <span class="pa-intro-number" aria-hidden="true">01</span>
+              <span class="pa-intro-label">Acertijo 1</span>
+              <div class="pa-intro-title" role="heading" aria-level="2">La trampa del progreso</div>
+              <div class="pa-intro-sub">El espejo engañoso</div>
+              <button type="button" class="pa-btn" data-pa-next>Ver la pista <i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+
+          <!-- ============ Pantalla 4 ============ -->
+          <article class="pa-screen pa-riddle" data-screen="1" data-riddle="1" data-correct="a"
+            data-title="El espejo engañoso">
+            <header class="pa-riddle-head">
+              <span class="pa-chip"><i class="bi bi-puzzle-fill"></i> Acertijo 1</span>
+              <h2>El espejo engañoso</h2>
+            </header>
+
+            <div class="pa-riddle-top">
+              <figure class="pa-figure pa-figure--brain">
+                <img src="assets/img/cerebro-3d.webp" alt="Cerebro humano en 3D con conexiones neuronales iluminadas">
+              </figure>
+              <blockquote class="pa-clue">
+                <span class="pa-clue-label"><i class="bi bi-search"></i> Pista del acertijo</span>
+                <p>"Siento que vuelo porque respondo todo rápido y sin dudar, pero al día siguiente el examen me deja en blanco. ¿Qué trampa cognitiva he activado?"</p>
+              </blockquote>
+            </div>
+
+            <div class="pa-task">
+              <fieldset class="pa-question">
+                <legend><span class="pa-task-n">1</span> Selecciona el concepto que responde al caso anterior:</legend>
+                <div class="pa-options">
+                  <label class="pa-option"><input type="radio" name="pa-r1" value="a"><span class="pa-option-mark"></span><span>Daño por facilidad</span></label>
+                  <label class="pa-option"><input type="radio" name="pa-r1" value="b"><span class="pa-option-mark"></span><span>Recuperación</span></label>
+                </div>
+                <div class="pa-verify-row">
+                  <button type="button" class="pa-btn pa-verify" disabled><i class="bi bi-lock-fill"></i> Verificar respuesta</button>
+                  <span class="pa-verify-hint">Selecciona una opción para habilitar la verificación.</span>
+                </div>
+                <div class="pa-feedback" aria-live="polite"></div>
+                <!-- Retroalimentaciones (editables) -->
+                <div class="pa-feedback-src" data-for="a" data-tag="Cerebro predictivo">Tu cerebro predijo que la fluidez era maestría. La fluidez inmediata es solo memoria de trabajo. El aprendizaje duradero exige la fricción del esfuerzo. En el caso, ha sido el daño por facilidad el que se ha activado como trampa.</div>
+                <div class="pa-feedback-src" data-for="b">Respuesta incorrecta. Inténtalo de nuevo.</div>
+              </fieldset>
+
+              <div class="pa-analogy">
+                <label class="pa-analogy-label" id="pa-analogy-1-label"><span class="pa-task-n">2</span> Declara tu analogía:</label>
+                <div class="pa-analogy-box">
+                  <span class="pa-analogy-prefix">"Esto es como cuando…"</span>
+                  <div class="pa-rte-area" id="pa-analogy-1" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="pa-analogy-1-label" data-placeholder="Completa la frase con una situación de tu vida cotidiana"></div>
+                  <span class="pa-analogy-count">0/500</span>
+                </div>
+              </div>
+
+              <div class="pa-error" role="alert"></div>
+
+              <div class="pa-actions">
+                <button type="button" class="pa-btn pa-btn--spark pa-continue">Siguiente acertijo <i class="bi bi-play-fill"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ============ Pantalla 5 ============ -->
+          <article class="pa-screen pa-intro" data-screen="2">
+            <div class="pa-intro-bg pa-intro-bg--kb" style="background-image: url('assets/img/acertijo-2.webp');" aria-hidden="true"></div>
+            <div class="pa-sparks" aria-hidden="true"></div>
+            <div class="pa-intro-content">
+              <span class="pa-intro-number" aria-hidden="true">02</span>
+              <span class="pa-intro-label">Acertijo 2</span>
+              <div class="pa-intro-title" role="heading" aria-level="2">El freno de mano cognitivo</div>
+              <div class="pa-intro-sub">El ancla invisible</div>
+              <button type="button" class="pa-btn" data-pa-next>Ver la pista <i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+
+          <!-- ============ Pantalla 6 ============ -->
+          <article class="pa-screen pa-riddle" data-screen="3" data-riddle="2" data-correct="b"
+            data-title="El ancla invisible">
+            <header class="pa-riddle-head">
+              <span class="pa-chip"><i class="bi bi-puzzle-fill"></i> Acertijo 2</span>
+              <h2>El ancla invisible</h2>
+            </header>
+
+            <div class="pa-riddle-top pa-riddle-top--photo">
+              <figure class="pa-figure pa-figure--live">
+                <div class="pa-sparks" aria-hidden="true"></div>
+                <img src="assets/img/acertijo-2.webp" alt="Sinapsis en 3D: terminal presináptica liberando neurotransmisores hacia los receptores">
+              </figure>
+              <blockquote class="pa-clue">
+                <span class="pa-clue-label"><i class="bi bi-search"></i> Pista del acertijo</span>
+                <p>"Le suele pasar a Sofía que, ante la primera duda, declina. No es falta de capacidad, es el impulso de huir hacia algo más fácil apenas surge la dificultad. ¿Qué sistema neurocognitivo debe tomar el timón?"</p>
+              </blockquote>
+            </div>
+
+            <div class="pa-task">
+              <fieldset class="pa-question">
+                <legend><span class="pa-task-n">1</span> Selecciona el concepto que responde al caso anterior:</legend>
+                <div class="pa-options">
+                  <label class="pa-option"><input type="radio" name="pa-r2" value="a"><span class="pa-option-mark"></span><span>Daño por facilidad</span></label>
+                  <label class="pa-option"><input type="radio" name="pa-r2" value="b"><span class="pa-option-mark"></span><span>Control ejecutivo</span></label>
+                </div>
+                <div class="pa-verify-row">
+                  <button type="button" class="pa-btn pa-verify" disabled><i class="bi bi-lock-fill"></i> Verificar respuesta</button>
+                  <span class="pa-verify-hint">Selecciona una opción para habilitar la verificación.</span>
+                </div>
+                <div class="pa-feedback" aria-live="polite"></div>
+                <div class="pa-feedback-src" data-for="a">¡Oops! Inténtalo de nuevo.</div>
+                <div class="pa-feedback-src" data-for="b" data-tag="Control ejecutivo">Al frenar el impulso de huida de Sofía, el control ejecutivo sostiene la atención en la incertidumbre, permitiendo recalibrar la predicción fallida.</div>
+              </fieldset>
+
+              <div class="pa-analogy">
+                <label class="pa-analogy-label" id="pa-analogy-2-label"><span class="pa-task-n">2</span> Declara tu analogía:</label>
+                <div class="pa-analogy-box">
+                  <span class="pa-analogy-prefix">"Esto es como cuando…"</span>
+                  <div class="pa-rte-area" id="pa-analogy-2" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="pa-analogy-2-label" data-placeholder="Completa la frase con una situación de tu vida cotidiana"></div>
+                  <span class="pa-analogy-count">0/500</span>
+                </div>
+              </div>
+
+              <div class="pa-error" role="alert"></div>
+
+              <div class="pa-actions">
+                <button type="button" class="pa-btn pa-btn--spark pa-continue">Siguiente acertijo <i class="bi bi-play-fill"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ============ Pantalla 7 ============ -->
+          <article class="pa-screen pa-intro" data-screen="4">
+            <div class="pa-intro-bg pa-intro-bg--kb" style="background-image: url('assets/img/acertijo-3.webp');" aria-hidden="true"></div>
+            <div class="pa-sparks" aria-hidden="true"></div>
+            <div class="pa-intro-content">
+              <span class="pa-intro-number" aria-hidden="true">03</span>
+              <span class="pa-intro-label">Acertijo 3</span>
+              <div class="pa-intro-title" role="heading" aria-level="2">Forjar la plasticidad</div>
+              <div class="pa-intro-sub">La fricción reveladora</div>
+              <button type="button" class="pa-btn" data-pa-next>Ver la pista <i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+
+          <!-- ============ Pantalla 8 ============ -->
+          <article class="pa-screen pa-riddle" data-screen="5" data-riddle="3" data-correct="a"
+            data-title="La fricción reveladora">
+            <header class="pa-riddle-head">
+              <span class="pa-chip"><i class="bi bi-puzzle-fill"></i> Acertijo 3</span>
+              <h2>La fricción reveladora</h2>
+            </header>
+
+            <div class="pa-riddle-top pa-riddle-top--photo">
+              <figure class="pa-figure pa-figure--live">
+                <div class="pa-sparks" aria-hidden="true"></div>
+                <img src="assets/img/acertijo-3.webp" alt="Red neuronal azul con chispas naranjas que representan la actividad cerebral">
+              </figure>
+              <blockquote class="pa-clue">
+                <span class="pa-clue-label"><i class="bi bi-search"></i> Pista del acertijo</span>
+                <p>"Sofía cree en ocasiones que es mejor no arriesgarse. Dejar la casilla en blanco protege el ego, pero congela la mente. En beneficio del aprendizaje, ¿vale la pena equivocarse?"</p>
+              </blockquote>
+            </div>
+
+            <div class="pa-task">
+              <fieldset class="pa-question">
+                <legend><span class="pa-task-n">1</span> Selecciona el concepto que responde al caso anterior:</legend>
+                <div class="pa-options">
+                  <label class="pa-option"><input type="radio" name="pa-r3" value="a"><span class="pa-option-mark"></span><span>Reorganización neuronal</span></label>
+                  <label class="pa-option"><input type="radio" name="pa-r3" value="b"><span class="pa-option-mark"></span><span>Conservación del saber</span></label>
+                </div>
+                <div class="pa-verify-row">
+                  <button type="button" class="pa-btn pa-verify" disabled><i class="bi bi-lock-fill"></i> Verificar respuesta</button>
+                  <span class="pa-verify-hint">Selecciona una opción para habilitar la verificación.</span>
+                </div>
+                <div class="pa-feedback" aria-live="polite"></div>
+                <div class="pa-feedback-src" data-for="a" data-tag="Reorganización neuronal">Equivocarnos permite nuestra reorganización neuronal. El acto de predecir y corregir activa nuestra red de procesamiento y habilita la plasticidad (Dehaene).</div>
+                <div class="pa-feedback-src" data-for="b">¡Oops! Inténtalo de nuevo.</div>
+              </fieldset>
+
+              <div class="pa-analogy">
+                <label class="pa-analogy-label" id="pa-analogy-3-label"><span class="pa-task-n">2</span> Declara tu analogía:</label>
+                <div class="pa-analogy-box">
+                  <span class="pa-analogy-prefix">"Esto es como cuando…"</span>
+                  <div class="pa-rte-area" id="pa-analogy-3" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="pa-analogy-3-label" data-placeholder="Completa la frase con una situación de tu vida cotidiana"></div>
+                  <span class="pa-analogy-count">0/500</span>
+                </div>
+              </div>
+
+              <div class="pa-error" role="alert"></div>
+
+              <div class="pa-actions">
+                <button type="button" class="pa-btn pa-btn--spark pa-continue" data-last>Ver mis analogías</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section><!-- /Fin TAB 2 -->
+
+    <!-- ===================================================== -->
+    <!-- TAB 3 · Tus analogías (resumen al terminar)           -->
+    <!-- ===================================================== -->
+    <section id="seccion4" class="tab-content">
+      <div class="container pa-section">
+        <h1>Tus analogías</h1>
+
+        <div class="pa-locked">
+          <div class="pa-locked-icon"><i class="bi bi-lock-fill"></i></div>
+          <h3>Aún no hay puentes construidos</h3>
+          <p>Completa los tres acertijos y declara tus analogías para verlas reunidas aquí.</p>
+          <button type="button" class="pa-btn" data-pa-goto="seccion3">Ir a los acertijos <i class="bi bi-play-fill"></i></button>
+        </div>
+
+        <div class="pa-summary">
+          <p class="pa-section-lead">Estos son los puentes que tendiste entre lo que ya comprendías y cada concepto.</p>
+          <ol class="pa-bridges" id="paBridges"></ol>
+
+          <div class="pa-closing">
+            <img class="pa-closing-sofia" src="assets/img/sofia-aprueba.svg" alt="Sofía sonríe y aprueba con el pulgar arriba">
+            <div class="pa-closing-bubble">
+              <p>A diferencia de Sofía, esta vez no dejaste ninguna casilla en blanco: propusiste, verificaste y ajustaste tu modelo mental.</p>
+            </div>
+          </div>
+
+          <div class="pa-summary-actions">
+            <button type="button" class="pa-btn" id="paDownload"><i class="bi bi-file-earmark-pdf-fill"></i> Descargar mis analogías</button>
+            <button type="button" class="pa-btn pa-btn--ghost" id="paRestart"><i class="bi bi-arrow-repeat"></i> Reiniciar el recurso</button>
+          </div>
+          <p class="pa-download-note" id="paDownloadNote" role="status"></p>
+        </div>
+      </div>
+    </section><!-- /Fin TAB 3 -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container copyright mt-4">
+      <p><strong class="sitename">Curso:</strong> Aprender a aprender.</p>
+      <div class="credits">
+        <p><b>Experto temático:</b> Mateo Muñetones Rico.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!--cambiar el tamaño de la letra-->
+  <script src="assets/js/tamano-letra.js"></script>
+
+  <!--Cambiar al modo oscuro-->
+  <script src="assets/js/modo-oscuro.js"></script>
+
+  <!-- Generación del PDF con la plantilla "Aprender a aprender" -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="assets/js/plantilla-pdf.js" defer></script>
+
+  <!-- Lógica del recurso "Pistas y analogías" -->
+  <script src="assets/js/editor-analogias.js"></script>
+  <script src="assets/js/pistas-analogias.js"></script>
+
+</body>
+
+</html>
